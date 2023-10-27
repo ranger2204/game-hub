@@ -13,7 +13,7 @@ function App() {
       <NavBar />
     </GridItem>
     <Show above="lg">
-      <GridItem area="aside">
+      <GridItem area="aside" paddingX={4}>
         <GenreList />
       </GridItem>
     </Show>
