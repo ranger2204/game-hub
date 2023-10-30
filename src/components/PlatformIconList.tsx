@@ -25,7 +25,8 @@ const PlatformIconList = ({ platforms }: Props) => {
 
     return (
         <HStack marginY={'10px'}>
-            {platforms.map((platform) => <Icon title={platform.name} key={platform.name} as={iconMap[platform.name.toLowerCase()]} color='gray.500' />)}
+            {platforms.map(
+                (platform) => <Icon title={platform.name} key={platform.name} as={iconMap[platform.name.toLowerCase()]} color='gray.500' />)}
         </HStack>
     )
 }
