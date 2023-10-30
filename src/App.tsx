@@ -11,7 +11,8 @@ import { Genre } from './hooks/useGenres'
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
-  ordering: any | null
+  ordering: any | null,
+  searchText: string | null
 }
 
 
@@ -27,7 +28,7 @@ function App() {
     lg: `"nav nav" "aside main"`
   }}>
     <GridItem area="nav">
-      <NavBar />
+      <NavBar onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })} />
     </GridItem>
     <Show above="lg">
       <GridItem area="aside" paddingX={4}>
